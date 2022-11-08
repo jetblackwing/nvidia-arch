@@ -9,8 +9,11 @@
 ###  Installation  ###
 
 $ git clone https://github.com/jetblackwing/nvidia-arch.git
+
 $ cd nvidia-arch
+
 $ chmod +x nvidia-setup
+
 $ sudo ./nvidia-setup
 
 reboot & enjoy :)
