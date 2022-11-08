@@ -1,0 +1,21 @@
+#!/bin/bash
+
+pacman -S nvidia nvidia-utils
+
+cp nvidia.hook /etc/pacman.d/hooks/
+
+cat "blacklist nouveau" >> /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+
+cp 20-nvidia.conf /etc/X11/xorg.conf.d/
+
+sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/g' /etc/mkinitcpio.conf
+
+mkinitcpio -P linux
+
+xrandr --listproviders
+
+cat "xrandr --setprovideroutputsource modesetting NVIDIA-0" >> ~/.xinitrc
+cat "xrandr --auto" >> ~/.xinitrc
+cat "exec i3 &>> \"/var/log/i3.log\" "
+
+
