@@ -6,6 +6,8 @@
 - Maybe replaces integrated display 
 - Works only on X11
 
+[Recommended install: use program file instead of script.]
+
 ###  Installation  ###
 
 1)
