@@ -9,7 +9,7 @@ int main()
   printf("\nProgram will execute in 30 seconds, because I dont know how to put conditional statements.");
   
   system("sleep 3");
-//  system("pacman -S nvidia nvidia-utils nvidia-settings");
+  system("pacman -S nvidia nvidia-utils nvidia-settings");
 
 //System configuration of /etc/pacman.d/hooks/nvidia.hook
   printf("\nWriting data to /etc/pacman.d/hooks/nvidia.hook ...");
