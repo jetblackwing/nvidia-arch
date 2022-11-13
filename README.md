@@ -12,28 +12,28 @@
 
 1)
 
-  $ git clone https://github.com/jetblackwing/nvidia-arch.git
+      $ git clone https://github.com/jetblackwing/nvidia-arch.git
   
-  $ gcc nvidiaconf.c  -o nvidiaconf
+      $ gcc nvidiaconf.c  -o nvidiaconf
   
-  $ chmod +x nvidiaconf
+      $ chmod +x nvidiaconf
   
-  $ sudo ./nvidiaconf
+      $ sudo ./nvidiaconf
   
   ... and reboot
   
   
-        [ OR ]
+   OR
   
 
 2)
 
-  $ git clone https://github.com/jetblackwing/nvidia-arch.git
+      $ git clone https://github.com/jetblackwing/nvidia-arch.git 
 
-  $ cd nvidia-arch
+      $ cd nvidia-arch 
 
-  $ chmod +x nvidia-setup
+      $ chmod +x nvidia-setup 
 
-  $ sudo ./nvidia-setup
+      $ sudo ./nvidia-setup 
 
   reboot & enjoy :)
