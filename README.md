@@ -8,12 +8,30 @@
 
 ###  Installation  ###
 
-$ git clone https://github.com/jetblackwing/nvidia-arch.git
+1)
 
-$ cd nvidia-arch
+  $ git clone https://github.com/jetblackwing/nvidia-arch.git
+  
+  $ gcc nvidiaconf.c  -o nvidiaconf
+  
+  $ chmod +x nvidiaconf
+  
+  $ sudo ./nvidiaconf
+  
+  ... and reboot
+  
+  
+        [ OR ]
+  
 
-$ chmod +x nvidia-setup
+2)
 
-$ sudo ./nvidia-setup
+  $ git clone https://github.com/jetblackwing/nvidia-arch.git
 
-reboot & enjoy :)
+  $ cd nvidia-arch
+
+  $ chmod +x nvidia-setup
+
+  $ sudo ./nvidia-setup
+
+  reboot & enjoy :)
