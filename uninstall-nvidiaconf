@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Uninstalling nvidia configurations ..."
+
+echo "Removing Packages ..."
+pacman -Rns nvidia nvidia-utils nvidia-settings
+
+echo " Removing /etc/pacman.d/hooks/nvidia.hook ..."
+rm /etc/pacman.d/hooks/nvidia.hook 
+
+echo "Removing /etc/modprobe.d/blacklist-nvidia-nouveau.conf ..."
+rm /etc/modprobe.d/blacklist-nvidia-nouveau.conf
+
+echo "Reverting kernel hooks ..."
+sed -i 's/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm/MODULES=()/g' /etc/mkinitcpio.conf
+
+echo "Recompiling Kernel ..."
+mkinitcpio -P
+
+echo "Removing .xinitrc ..."
+rm ~/.xinitrc
