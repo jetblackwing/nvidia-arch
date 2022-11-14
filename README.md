@@ -37,3 +37,9 @@
       $ sudo ./nvidia-setup 
 
   reboot & enjoy :)
+  
+  
+  
+  ### To Uninstall  ###
+  
+      $ sudo ./uninstall-nvidiaconf
